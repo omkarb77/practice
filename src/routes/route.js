@@ -1,9 +1,10 @@
 const express = require('express');
-const myHelper = require('../util/helper')
-const underscore = require('underscore')
+//const myHelper = require('../util/helper')
+//const underscore = require('underscore')
 
 const router = express.Router();
 
+/*
 router.get('/test-me', function (req, res) {
     myHelper.printDate()
     myHelper.getCurrentMonth()
@@ -143,6 +144,7 @@ router.get('/student-details/:name', function(req, res){
     res.send('Dummy response')
 })
 */
+/*
 router.get('/get/movies/:indexNumber', function(req,res){
     let arr=['Dabangg','Dhoom','Border','Shershah']
     let indexNum = req.params.indexNumber
@@ -185,6 +187,46 @@ router.get('/GET/films/:filmId', function(req,res){
     
      
 })
+*/
 // assignment 
 //assignemnt 1
+
+let players =
+   [
+       {
+           "name": "manish",
+           "dob": "1/1/1995",
+           "gender": "male",
+           "city": "jalandhar",
+           "sports": [
+               "swimming"
+           ]
+       },
+       {
+           "name": "gopal",
+           "dob": "1/09/1995",
+           "gender": "male",
+           "city": "delhi",
+           "sports": [
+               "soccer"
+           ],
+       },
+       {
+           "name": "lokesh",
+           "dob": "1/1/1990",
+           "gender": "male",
+           "city": "mumbai",
+           "sports": [
+            "soccer"
+        ],
+    },
+]
+
+router.post('/players', function (req, res) {
+
+    //LOGIC WILL COME HERE
+    res.send(  { data: players , status: true }  )
+})
+     
 module.exports = router;
+
