@@ -63,6 +63,7 @@ router.post("/test-post-3", function(req, res) {
 
 
 
+/*
 router.post("/test-post-4", function(req, res) {
     let arr= [ 12, "functionup"]
     let ele= req.body.element
@@ -117,5 +118,51 @@ for(let i=0; i<players.length; i++){
     
 //    res.send(  { data: players , status: true }  )
 //})
+
+//module.exports = router;
+
+*/
+
+
+let person=[
+    {
+    name:"PK",
+    age:10,
+    votingStatus: false,
+    },
+    {
+        name:"SK",
+        age:18,
+        votingStatus: false,
+        },
+        {
+            name:"AA",
+            age:25,
+            votingStatus: false,
+            },
+            {
+                name:"HO",
+                age:65,
+                votingStatus: false,
+                },
+                {
+                    name:"SC",
+                    age:35,
+                    votingStatus: false,
+                }
+];
+router.post("/persone/:votetingAge",
+function(req,res){
+    let arr =[];
+    let input = req.params.votetingAge;
+    for (var i=0;i<person.length;i++){
+        if (person [i].age>= input){
+             person[i].votingStatus = true;
+             arr.push(person[i]);
+           }
+    }
+    res.send({"that person can vote":arr});
+})
+
 
 module.exports = router;
