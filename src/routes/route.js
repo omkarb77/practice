@@ -29,6 +29,8 @@ router.get('/test-me', function (req, res) {
     const arr = _.union(arry1, arry2, arry3, arry4, arry5);
     console.log(arr);
 
+    
+
     const object = _.fromPairs([['horror', 'The Shining'],
     ['drama', 'Titanic'],
     ['thriller', 'Shutter Island'],
