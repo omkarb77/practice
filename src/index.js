@@ -8,18 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-mongoose.connect("mongodb+srv://Bhuwan:fake2fake@cluster0.hqasqii.mongodb.net/Blogging-Site?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://omkar077:BeEHI8wSohCTOfTl@cluster0.tyx7riv.mongodb.net/DB3", {
     useNewUrlParser: true
 })
     .then(() => console.log("MongoDb is connected"))
     .catch(err => console.log(err))
 
-// app.use (
-//     function (req, res, next) {
-//         console.log ("inside GLOBAL MW");
-//         next();
-//   }
-//   );
 
 app.use('/', route);
 
